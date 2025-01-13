@@ -108,8 +108,10 @@ public class MainActivity extends AppCompatActivity {
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(System.currentTimeMillis());
         String imageFileName = "JPEG_" + timeStamp + "_";
-        String url = Environment.DIRECTORY_PICTURES;
-        File storageDir = getExternalFilesDir("Pictures");
+        //String url = Environment.DIRECTORY_PICTURES;
+        //File storageDir = getExternalFilesDir("Pictures");
+        File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
+
 
         File image = null;
         try {
